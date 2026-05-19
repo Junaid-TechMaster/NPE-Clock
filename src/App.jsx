@@ -12,6 +12,7 @@ import IntelligentClockImage from './images/image5.png';
 import SkeletonClockImage from './images/image6.jpg';
 import Herosectionimage from './images/image7.png';
 import towerClockImage2 from './images/image2.png';
+import Legacyimage1 from './images/image8.png';
 
 // --- CUSTOM BRAND ICONS ---
 const WhatsAppIcon = ({ size = 20, className = "" }) => (
@@ -44,7 +45,7 @@ const founders = [
     name: 'Waheed-ud-din (Late)', 
     era: 'Founder (1940s - 1985)', 
     desc: 'Built the foundation from scraps as Pioneer Watch Co. Secured the US Army contract for the first 24-hour analogue clock in Asia in 1942. Invented the famous Salat Clock.',
-    img: 'https://images.unsplash.com/photo-1548625361-ec85cb2be162?auto=format&fit=crop&q=80' // Placeholder historical image
+    img: Legacyimage1 // Placeholder historical image
   },
   { 
     name: 'Nasir-ud-din (Late)', 
