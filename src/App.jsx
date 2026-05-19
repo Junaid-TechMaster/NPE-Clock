@@ -51,7 +51,7 @@ const founders = [
     name: 'Nasir-ud-din (Late)', 
     era: 'Managing Director (1985 - 2008)', 
     desc: 'Joined the business in 1985, rebranding it to New Precision Engineering. Oversaw major expansions and continued the legacy until his unfortunate passing in 2008.',
-    img: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80' // Placeholder historical image
+    img: Legacyimage1 // Placeholder historical image
   },
   { 
     name: 'Sami-ud-din', 
