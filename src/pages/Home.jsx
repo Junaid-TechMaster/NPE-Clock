@@ -111,7 +111,7 @@ function HeroSlider() {
 // ── Featured Products (3 cards — 3D tilt on hover) ────────────────────────────
 function FeaturedProducts() {
   return (
-    <section className="py-20 md:py-24 px-4 md:px-12 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section className="py-20 md:py-24 px-3 sm:px-6 md:px-12 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, rotateX: 20, y: 20 }}
@@ -140,7 +140,7 @@ function FeaturedProducts() {
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               transition={{ duration: 0.6, delay: index * 0.12, ease: 'easeOut' }}
               viewport={{ once: true }}
-              whileHover={{ rotateX: -5, rotateY: 7, scale: 1.03, transition: { duration: 0.3, ease: 'easeOut' } }}
+              whileHover={{ rotateX: -5, rotateY: 7, scale: 1.03, boxShadow: '0 0 30px rgba(234,179,8,0.55), 0 12px 40px rgba(0,0,0,0.35)', transition: { duration: 0.3, ease: 'easeOut' } }}
               style={{ transformPerspective: 800 }}
               className="group relative h-80 md:h-96 overflow-hidden cursor-pointer shadow-lg bg-gray-100 dark:bg-gray-800"
             >
@@ -185,7 +185,7 @@ function ProjectsCarousel() {
   const project = featuredProjects[current];
 
   return (
-    <section className="bg-gray-900 dark:bg-gray-950 transition-colors duration-300">
+    <section className="px-3 sm:px-6 md:px-12 bg-gray-900 dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20, rotateX: 15 }}
@@ -219,7 +219,7 @@ function ProjectsCarousel() {
             </div>
 
             {/* Details — right / bottom on mobile */}
-            <div className="w-full md:w-1/2 bg-gray-800 dark:bg-gray-900 p-8 md:p-14 flex flex-col justify-center">
+            <div className="w-full md:w-1/2 bg-gray-800 dark:bg-gray-900 p-6 sm:p-8 md:p-14 flex flex-col justify-center">
               <span className="text-[#EAB308] text-xs font-bold uppercase tracking-widest mb-3">Featured Installation</span>
               <h3 className="text-2xl md:text-4xl font-bold text-white uppercase tracking-wide mb-2 leading-tight">
                 {project.title}
@@ -278,7 +278,7 @@ function AwardsInstallations() {
   ];
 
   return (
-    <section className="py-20 md:py-24 px-4 md:px-12 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300">
+    <section className="py-20 md:py-24 px-3 sm:px-6 md:px-12 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, rotateX: 20, y: 20 }}
@@ -303,7 +303,7 @@ function AwardsInstallations() {
               whileInView={{ opacity: 1, rotateY: 0 }}
               transition={{ duration: 0.55, delay: i * 0.12, ease: 'easeOut' }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.06, rotateX: -5, rotateY: 8, transition: { duration: 0.25 } }}
+              whileHover={{ scale: 1.06, rotateX: -5, rotateY: 8, boxShadow: '0 0 22px rgba(234,179,8,0.45), 0 8px 24px rgba(0,0,0,0.12)', transition: { duration: 0.25 } }}
               style={{ transformPerspective: 700 }}
               className="bg-white dark:bg-gray-800 rounded-2xl p-5 md:p-6 text-center shadow border border-gray-100 dark:border-gray-700 cursor-default"
             >
@@ -337,7 +337,7 @@ function AwardsInstallations() {
               whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.02, rotateX: -3, rotateY: i === 0 ? 4 : -4, transition: { duration: 0.3 } }}
+              whileHover={{ scale: 1.02, rotateX: -3, rotateY: i === 0 ? 4 : -4, boxShadow: '0 0 34px rgba(234,179,8,0.55), 0 14px 44px rgba(0,0,0,0.4)', transition: { duration: 0.3 } }}
               style={{ transformPerspective: 900 }}
               className={`group relative h-64 md:h-80 overflow-hidden cursor-pointer shadow-xl ${panel.bg} bg-cover bg-center`}
             >
@@ -376,7 +376,7 @@ function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="py-20 md:py-24 px-4 md:px-12 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section className="py-20 md:py-24 px-3 sm:px-6 md:px-12 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, rotateX: 20, y: 20 }}
@@ -401,8 +401,8 @@ function Testimonials() {
               exit={{ opacity: 0, y: -24, rotateX: -10, scale: 0.97 }}
               transition={{ duration: 0.45, ease: 'easeOut' }}
               style={{ transformPerspective: 1000 }}
-              whileHover={{ rotateX: 2, rotateY: -2, scale: 1.008, transition: { duration: 0.3 } }}
-              className="bg-[#FFFDF9] dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-3xl p-8 md:p-14 shadow-xl text-center cursor-default"
+              whileHover={{ rotateX: 2, rotateY: -2, scale: 1.008, boxShadow: '0 0 24px rgba(234,179,8,0.3), 0 8px 28px rgba(0,0,0,0.1)', transition: { duration: 0.3 } }}
+              className="bg-[#FFFDF9] dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-3xl p-6 sm:p-8 md:p-14 shadow-xl text-center cursor-default"
             >
               <div className="text-[#EAB308] text-7xl md:text-8xl font-serif leading-none mb-4 opacity-25 select-none">&ldquo;</div>
               <div className="flex justify-center gap-1 mb-6">
@@ -449,7 +449,7 @@ function Testimonials() {
 // ── Contact Form ──────────────────────────────────────────────────────────────
 function HomeContact() {
   return (
-    <section className="py-20 md:py-24 px-4 md:px-12 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300">
+    <section className="py-20 md:py-24 px-3 sm:px-6 md:px-12 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300">
       <motion.div
         initial={{ opacity: 0, rotateX: 20, y: 20 }}
         whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
@@ -473,7 +473,7 @@ function HomeContact() {
         style={{ transformPerspective: 1200 }}
         className="max-w-5xl mx-auto bg-gray-900 dark:bg-black shadow-2xl overflow-hidden flex flex-col md:flex-row w-full border border-gray-800"
       >
-        <div className="md:w-2/5 bg-gray-800 p-8 md:p-10 text-white flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-700">
+        <div className="md:w-2/5 bg-gray-800 p-6 sm:p-8 md:p-10 text-white flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-700">
           <h3 className="text-xl md:text-3xl uppercase tracking-widest font-bold mb-4 text-[#EAB308]">
             Precision Engineering &amp; Timeless Craftsmanship
           </h3>
@@ -486,7 +486,7 @@ function HomeContact() {
           </div>
         </div>
 
-        <div className="md:w-3/5 p-8 md:p-10 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300">
+        <div className="md:w-3/5 p-6 sm:p-8 md:p-10 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300">
           <form action="https://formspree.io/f/xdabypko" method="POST" className="space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>

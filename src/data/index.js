@@ -6,6 +6,11 @@ import IntelligentClockImage from '../images/image5.png';
 import SkeletonClockImage from '../images/image6.jpg';
 import Herosectionimage from '../images/image7.png';
 import Legacyimage1 from '../images/image8.png';
+import PunjabCivilSecretariatImage from '../images/Punjab_Civil_Secritariat.png';
+import FatimaJinnahMedicalImage from '../images/Fatima_Jinnah_Medical.jpg';
+import TBHospitalSargodhaImage from '../images/T.B_Hospital_Sarghoda.png';
+import MayoHospitalLahoreImage from '../images/Mayo_Hospital_Lahore.png';
+import SamliMurreeImage from '../images/Samli_Murree.png';
 
 export {
   towerClockImage,
@@ -16,6 +21,11 @@ export {
   SkeletonClockImage,
   Herosectionimage,
   Legacyimage1,
+  PunjabCivilSecretariatImage,
+  FatimaJinnahMedicalImage,
+  TBHospitalSargodhaImage,
+  MayoHospitalLahoreImage,
+  SamliMurreeImage,
 };
 
 export const products = [
@@ -100,7 +110,11 @@ export const installedProjects = [
 
 // Projects that display a real image on hover in the installations page
 export const projectImages = {
-  'Punjab Civil Secretariat Lahore (1951)': towerClockImage,
+  'Punjab Civil Secretariat Lahore (1951)': PunjabCivilSecretariatImage,
+  'Fatima Jinnah Medical College Lahore (1952)': FatimaJinnahMedicalImage,
+  'T.B Hospital Sargodha (1953)': TBHospitalSargodhaImage,
+  'Mayo Hospital Lahore (1954)': MayoHospitalLahoreImage,
+  'Samli Sanatorium Murree (1954)': SamliMurreeImage,
   'G.H.Q Rawalpindi (1984)': towerClockImage2,
   'Baharia Town Islamabad (2007)': FlowerClockImage,
   'NUST EME Islamabad (2022)': SkeletonClockImage,

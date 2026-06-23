@@ -3,7 +3,7 @@ import { MapPin, Clock } from 'lucide-react';
 import { WhatsAppIcon, FacebookIcon, InstagramIcon, LinkedinIcon } from './Icons';
 
 const Footer = () => (
-  <footer className="bg-gray-900 dark:bg-black text-white py-14 px-6 md:px-12 border-t border-gray-800">
+  <footer className="bg-gray-900 dark:bg-black text-white py-14 px-4 sm:px-6 md:px-12 border-t border-gray-800">
     <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-b border-gray-800 pb-10 mb-8">
 
       {/* Brand */}

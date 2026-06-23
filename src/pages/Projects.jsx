@@ -22,7 +22,7 @@ export default function Projects() {
 
   return (
     <section
-      className="pt-28 pb-24 px-4 md:px-12 bg-[#FFFDF9] dark:bg-gray-950 transition-colors duration-300 min-h-screen"
+      className="pt-28 pb-24 px-3 sm:px-6 md:px-12 bg-[#FFFDF9] dark:bg-gray-950 transition-colors duration-300 min-h-screen"
       onMouseMove={handleMouseMove}
     >
       <SEO title="Installations" description="View our 200+ monumental clock installations across Pakistan since 1951." />
@@ -67,8 +67,9 @@ export default function Projects() {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, rotateX: 20, y: 20 }}
-          animate={{ opacity: 1, rotateX: 0, y: 0 }}
+          whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
+          viewport={{ once: true }}
           style={{ transformPerspective: 1200 }}
           className="text-center mb-12 md:mb-16"
         >
@@ -90,7 +91,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, rotateY: 0 }}
               transition={{ duration: 0.55, delay: i * 0.12, ease: 'easeOut' }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05, rotateX: -4, rotateY: 6, transition: { duration: 0.25 } }}
+              whileHover={{ scale: 1.05, rotateX: -4, rotateY: 6, boxShadow: '0 0 22px rgba(234,179,8,0.45), 0 8px 24px rgba(0,0,0,0.12)', transition: { duration: 0.25 } }}
               style={{ transformPerspective: 700 }}
               className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl p-5 text-center shadow cursor-default"
             >
@@ -102,9 +103,10 @@ export default function Projects() {
 
         {/* Project list */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0, y: 40, rotateX: 10, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+          transition={{ duration: 0.65, ease: 'easeOut' }}
+          viewport={{ once: true }}
           className="bg-white dark:bg-gray-900 p-6 md:p-8 shadow-lg border border-gray-100 dark:border-gray-800 max-h-[680px] overflow-y-auto transition-colors duration-300"
           style={{ scrollbarWidth: 'thin', scrollbarColor: '#EAB308 transparent' }}
         >

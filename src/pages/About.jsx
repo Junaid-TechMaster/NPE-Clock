@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { fadeInUp } from '../utils/animations';
 import { Star } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -26,11 +25,18 @@ export default function About() {
   const [activeTab, setActiveTab] = useState('intro');
 
   return (
-    <div className="pt-28 pb-24 px-4 md:px-12 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300 min-h-screen">
+    <div className="pt-28 pb-24 px-3 sm:px-6 md:px-12 bg-[#FFFDF9] dark:bg-gray-900 transition-colors duration-300 min-h-screen">
       <SEO title="About Us" description="Learn about the history, mission, and vision of New Precision Engineering." />
       <div className="max-w-6xl mx-auto">
 
-        <div className="text-center mb-10">
+        <motion.div
+          initial={{ opacity: 0, rotateX: 20, y: 20 }}
+          whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          style={{ transformPerspective: 1200 }}
+          className="text-center mb-10"
+        >
           <p className="text-[#EAB308] font-bold uppercase tracking-widest text-sm mb-3">Est. 1940</p>
           <h2 className="text-3xl md:text-4xl uppercase tracking-widest font-bold dark:text-white text-gray-900 mb-8">Who We Are</h2>
           <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -48,9 +54,16 @@ export default function About() {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-white dark:bg-gray-800 p-6 md:p-12 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-xl overflow-hidden transition-colors duration-300">
+        <motion.div
+          initial={{ opacity: 0, y: 30, rotateX: 10, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+          transition={{ duration: 0.65, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          style={{ transformPerspective: 1000 }}
+          className="bg-white dark:bg-gray-800 p-5 sm:p-8 md:p-12 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-xl overflow-hidden transition-colors duration-300"
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -78,7 +91,7 @@ export default function About() {
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
+        </motion.div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14">
@@ -94,7 +107,7 @@ export default function About() {
               whileInView={{ opacity: 1, rotateY: 0 }}
               transition={{ duration: 0.55, delay: i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.06, rotateX: -5, rotateY: 7, transition: { duration: 0.25 } }}
+              whileHover={{ scale: 1.06, rotateX: -5, rotateY: 7, boxShadow: '0 0 22px rgba(234,179,8,0.45), 0 8px 24px rgba(0,0,0,0.12)', transition: { duration: 0.25 } }}
               style={{ transformPerspective: 700 }}
               className="bg-white dark:bg-gray-800 p-6 rounded-2xl text-center shadow border border-gray-100 dark:border-gray-700 cursor-default"
             >

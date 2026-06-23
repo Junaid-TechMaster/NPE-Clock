@@ -6,7 +6,7 @@ import { staggerContainer } from '../utils/animations';
 
 export default function Products() {
   return (
-    <section className="pt-28 pb-24 px-4 md:px-12 bg-white dark:bg-gray-950 transition-colors duration-300 min-h-screen">
+    <section className="pt-28 pb-24 px-3 sm:px-6 md:px-12 bg-white dark:bg-gray-950 transition-colors duration-300 min-h-screen">
       <SEO title="Our Products" description="Browse our portfolio of monumental clocks, bracket clocks, skeleton dials, and custom architectural timepieces." />
       <div className="max-w-7xl mx-auto">
 
@@ -27,19 +27,22 @@ export default function Products() {
         <motion.div
           variants={staggerContainer}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
           {products.map((product, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30, rotateX: 12 }}
-              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              initial={{ opacity: 0, y: 40, rotateX: 16, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
               transition={{ duration: 0.55, delay: index * 0.07, ease: 'easeOut' }}
+              viewport={{ once: true }}
               whileHover={{
                 rotateX: -6,
                 rotateY: index % 2 === 0 ? 8 : -8,
                 scale: 1.03,
+                boxShadow: '0 0 30px rgba(234,179,8,0.55), 0 12px 40px rgba(0,0,0,0.35)',
                 transition: { duration: 0.3, ease: 'easeOut' },
               }}
               style={{ transformPerspective: 800 }}
